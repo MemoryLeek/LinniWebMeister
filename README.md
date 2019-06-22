@@ -1,2 +1,2 @@
 # LinniWebMeister
-Web frontend for LinniMeister
+Web frontend for [LinniMeister](MemoryLeek/LinniMeister)
