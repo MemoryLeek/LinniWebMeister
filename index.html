@@ -11,15 +11,22 @@
 </head>
 
 <body>
-    <div class="container">
-        <div id="app" class="row d-flex justify-content-center mt-5" v-cloak>
+    <div id="app" class="container" v-cloak>
+        <div class="row">
             <p class="h1 m-5">{{ title }}</p>
-            <div id="votekey-input" class="input-group">
-                <input type="text" class="form-control" v-model="votekey" placeholder="Enter votekey">
+        </div>
+        <div class="row" v-if="!votekeyIsValid">
+            <form>
+                <input type="text" class="form-control" v-model="votekey" placeholder="Enter votekey" autofocus>
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button">Sign in</button>
+                    <button type="submit" class="btn btn-outline-secondary" type="button" v-on:click="signIn">Sign
+                        in</button>
                 </div>
-            </div>
+            </form>
+        </div>
+        <div class="row" v-else>
+            <button type="submit" class="btn btn-outline-secondary form-control" type="button" v-on:click="signOut">Sign
+                out</button>
         </div>
     </div>
 
