@@ -11,14 +11,16 @@
 </head>
 
 <body>
-    <div id="app" v-cloak>
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" v-model="votekey" placeholder="Your votekey">
-            <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Sign in</button>
+    <div class="container">
+        <div id="app" class="row d-flex justify-content-center mt-5" v-cloak>
+            <p class="h1 m-5">{{ title }}</p>
+            <div id="votekey-input" class="input-group">
+                <input type="text" class="form-control" v-model="votekey" placeholder="Enter votekey">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Sign in</button>
+                </div>
             </div>
         </div>
-        <h1>{{ votekey }}</h1>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
